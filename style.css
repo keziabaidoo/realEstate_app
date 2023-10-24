@@ -1,0 +1,798 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&family=Oswald&family=Poppins:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap");
+/*  1. Use a more-intuitive box-sizing model.*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+} /*  2. Remove default margin*/
+* {
+  margin: 0;
+} /*  Typographic tweaks!  3. Add accessible line-height  4. Improve text rendering*/
+body {
+  background-color: transparent;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f6f7f9;
+  color: rgb(33, 25, 34);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen-Sans", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+} /*  5. Improve media defaults*/
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+} /*  6. Remove built-in form typography styles*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+} /*  7. Avoid text overflows*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+} /*  8. Create a root stacking context*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* header */
+header {
+  display: flex;
+  gap: 3rem;
+  /* justify-content: space-evenly; */
+  padding: 2rem 6rem;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 300;
+z-index: 1;
+}
+
+#ham {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #232222;
+}
+
+.logo {
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding-top: 0.6rem;
+  cursor: pointer;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  opacity: 1;
+  letter-spacing: 2px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 15px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  color: white;
+  padding: 10px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 110px;
+  border-radius: 2px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 12px;
+}
+
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn i {
+  font-size: 14px;
+}
+
+.buy-text button {
+  cursor: pointer;
+}
+
+.buy-btn {
+  padding: 0.5rem 1.9rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 13px;
+  background-color: #0081fe;
+  color: white;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.hero {
+  background: url(images/1st_img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 15% 15%;
+  padding-bottom: 5rem;
+  border: 0;
+  /* height: auto; */
+  /* max-width: 100%; */
+  vertical-align: middle;
+}
+
+.hero-text {
+  display: grid;
+  justify-content: right;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr 1fr));
+  padding: 1rem 12.5rem;
+  text-align: center;
+}
+
+.hero-text span {
+  color: #fcfdfe;
+  /* opacity: 0.7; */
+}
+
+.hero-text span:first-of-type {
+  font-size: 1.5rem;
+}
+
+.hero-text span:last-of-type {
+  font-size: 12px;
+  padding-top: 0.5rem;
+}
+
+.hero-text h2 {
+  color: #fff;
+  padding-left: 8.5rem;
+}
+
+.btn {
+  padding-top: 2rem;
+  padding-left: 7.5rem;
+  font-size: 14px;
+}
+
+.hero-text button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.description-text {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr ));
+  padding: 5rem 10rem;
+  gap: 10px;
+  text-align: center;
+}
+
+.description-text p {
+  font-size: 10px;
+  padding-top: 0.4rem;
+  opacity: 0.5;
+}
+
+.description-text h2 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.description-text span {
+  display: block;
+  padding-top: 1rem;
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.des i {
+  font-size: 80px;
+  font-weight: 100;
+}
+
+.des .fa-lightbulb {
+  margin-bottom: 0.5rem;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr ));
+  background-color: #ddd;
+}
+
+.hero-content img {
+  height: 100%;
+  width: 50%;
+}
+
+.construction-content {
+  padding: 2rem 2rem;
+}
+
+.construction-text {
+  /* display: grid; */
+  /* text-align: right; */
+  text-align: center;
+}
+
+.construction-text p {
+  font-size: 13px;
+  padding-left: 2rem;
+}
+
+.construction-text span {
+  font-size: 15px;
+  padding-top: 1rem;
+}
+
+.hero-section {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.hero-section > div span:first-of-type {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #232222;
+}
+
+.hero-section > div span:last-of-type {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  color: #232222;
+  opacity: 0.5;
+  padding-top: 0.3rem;
+}
+
+.room-section {
+  padding: 3rem 10rem;
+  
+}
+
+.room-section p {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.room-section h2 {
+  font-size: 20px;
+  padding-top: 0.1rem;
+}
+
+.room-section span {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr ));
+  gap: 1rem;
+  padding-top: 2rem;
+  position: relative;
+}
+
+.rooms p {
+  display: grid;
+  position: absolute;
+  top: 9.5rem;
+  bottom: 0;
+  padding: 0 2rem;
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.7;
+  font-weight: 700;
+}
+
+.rooms img {
+  max-width: 100%;
+  max-height: 75%;
+  border-radius: 5px;
+
+
+
+}
+
+.recent-text {
+  
+}
+
+/* 
+.rooms img:first-of-type {
+  width: 50vw;
+  max-height: 89%;
+    
+} */
+
+/* .rooms img:last-of-type {
+    max-width: 100%;
+    max-height: 70%;
+   }  */
+
+.contact-info {
+  background-image: url(images/joel-filipe-RFDP7_80v5A-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+ 
+}
+
+.contact-text {
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); */
+
+  /* align-items: center; */
+  
+  justify-content: space-evenly;
+  padding: 3rem 5rem;
+}
+
+.btn-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr 1fr));
+}
+
+.text-input input {
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  border: 1px;
+  padding: 0.4rem;
+}
+
+.text-input {
+  gap:1rem
+}
+
+.text-input .input-info {
+  background-color: #0081fe;
+}
+
+.text-input .input-info::placeholder {
+  color: #fff;
+  font-weight: 900;
+}
+
+.text-input input::placeholder {
+  padding: 1rem;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.contact-text p {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.contact-text h2 {
+  font-size: 20px;
+  padding-top: 0.1rem;
+}
+
+.contact-text span {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+
+form {
+
+  display: flex;
+  flex-direction: column;
+}
+
+.customers p {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.customers h2 {
+  font-size: 20px;
+  padding-top: 0.1rem;
+}
+
+.customers span {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.customers {
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr  ));
+}
+
+.stars i {
+  color: yellow;
+  font-size: 12px;
+}
+
+.review-content {
+  padding: 3rem 12rem;
+}
+
+.names-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  padding-top: 2rem;
+  place-items: center;
+  gap: 5rem;
+}
+
+.review-text {
+  display: flex;
+  gap: 1rem;
+}
+
+.review-text img {
+  width: 100px;
+  height: 100px;
+  border-radius: 60%;
+  object-fit: cover;
+}
+
+.sample-text p {
+  font-size: 12px;
+  padding-top: 0.5rem;
+  opacity: 0.5;
+}
+
+.sample-text span {
+  font-size: 15px;
+}
+
+footer {
+  /* display: grid;
+    margin-top: 4rem;
+    padding: 3rem 3rem 6rem 3rem;
+    justify-content: space-between;
+    color: #fff;
+    background-color:black;
+    flex-wrap: wrap; */
+  flex-wrap: wrap;
+  color: #babcc0;
+  background-color: #232222;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  padding-top: 2rem;
+  place-items: center;
+  gap: 3rem;
+  padding: 2rem 10rem;
+}
+footer p {
+  font-size: 10px;
+}
+
+footer .time span {
+  font-size: 12px;
+}
+
+footer h3 {
+  font-size: 15px;
+}
+
+.logo {
+  font-size: 16px;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 1rem;
+}
+
+footer > div ul {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 1rem;
+  font-size: 12px;
+  padding-left: 2px;
+}
+
+footer div:last-of-type ul {
+  flex-direction: row;
+}
+
+footer div:nth-child(4) ul i {
+  margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  header .menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    transition: all 1s ease-in;
+  }
+
+  #ham {
+    display: block;
+    padding: 0.1rem 1rem;
+    border-radius: 3px;
+    border: none;
+  }
+
+  header {
+    position: relative;
+    /* padding: 2rem 1rem; */
+    /* margin: 0 auto; */
+  }
+
+  header .showMenu {
+    display: block;
+    top: 4.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+    background-color: rgb(98, 154, 188);
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+
+ 
+  .contact-text {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); */
+    /* align-items: center; */
+    justify-content: space-evenly;
+    padding: 3rem 5rem;
+    flex-direction: column;
+}
+
+.contact {
+  text-align: center;
+}
+
+.btn-form  {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
+
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+
+}
+  header .showMenu li a {
+    text-align: center;
+    color: #fff;
+  }
+
+  header .showMenu li:last-of-type {
+    margin-right: unset;
+  }
+
+  header {
+    /* padding: 2rem 1rem; */
+  }
+
+  .description-text {
+    padding: 5rem 10rem;
+    padding: 0;
+  }
+
+  .hero-content img {
+    height: 75%;
+    width: 100%;
+}
+
+.hero-text {
+  /* padding: 3.6rem; */
+  text-align: center;
+}
+.contact-text {
+  padding: 0;
+}
+
+.rooms p {
+  position: absolute;
+  top: 9.5rem;
+}
+
+.rooms {
+  place-items: center;
+}
+
+.recent-text {
+  text-align: center;
+}
+
+form {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+/* .hero-section {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    flex-direction: column;
+    text-align: center;
+} */
+
+.room-section {
+  padding: 2rem 2rem;
+  padding: 0;
+  align-items: center;
+}
+
+.review-text img {
+
+  margin: 0 auto;
+}
+.rooms img {
+  /* max-width: 100%; */
+  height: 100%;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.rooms img:first-of-type {
+  width: 50vw;
+  max-height: 100%;
+}
+
+.room-section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section {
+  display: flex;
+  gap: 2rem;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-content{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /* padding-top: 1rem; */
+  /* padding-bottom: 1rem; */
+}
+.description-text {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-text {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  text-align: center;
+}
+
+.customers {
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr 1fr));
+
+}
+
+.review-content {
+  padding: 0;
+}
+
+.review-section {
+ 
+  gap: 2rem;
+}
+
+.review-content {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  padding: 0;
+  margin-top: 1rem;
+  padding: 0.9rem;
+  
+  }
+
+  .about {
+    text-align: center;
+  }
+
+  .about p {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .hero-text {
+    padding: 1rem 4.5rem;
+    text-align: center;
+}
+}
+
+@media only screen and (min-width: 600px){
+
+ 
+}
+  
+
